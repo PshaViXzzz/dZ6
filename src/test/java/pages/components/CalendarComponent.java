@@ -1,12 +1,14 @@
 package pages.components;
 
+import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarComponent {
-    public void setDate() {
-        $(".react-datepicker__month-select").selectOptionByValue("2");
-        $(".react-datepicker__year-select").selectOptionByValue("1999");
-        $(byText("15")).click();
+    public void setDate(String day, String month, String year) {
+        $(".react-datepicker__month-select").selectOption(month);
+        $(".react-datepicker__year-select").selectOption(year);
+        $(".react-datepicker__day--0" + day + ":not(.react-datepicker__day--outside-month)").click();
     }
 }

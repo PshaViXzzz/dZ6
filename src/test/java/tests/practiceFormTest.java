@@ -1,17 +1,14 @@
-package Tests;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.google.common.base.Splitter.on;
 
-public class PracticeFormTest {
+public class practiceFormTest {
 
     @BeforeAll
     static void beforeAll() {
@@ -23,8 +20,6 @@ public class PracticeFormTest {
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
         $("#firstName").setValue("Ivan");
         $("#lastName").setValue("Ivanov");
         $("#userEmail").setValue("ivanov@mail.com");
