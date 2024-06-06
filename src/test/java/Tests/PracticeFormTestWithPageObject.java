@@ -1,9 +1,8 @@
+package Tests;
+
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
-
-import static com.codeborne.selenide.Condition.empty;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import pages.components.TestBase;
 
 public class PracticeFormTestWithPageObject extends TestBase {
 
