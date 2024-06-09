@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
-    private SelenideElement firstNameInput = $("#firstName"),
+    private final SelenideElement firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
             chooseGender = $("#genterWrapper"),
@@ -104,9 +104,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage checkNotAppearingResultTable() {
+    public void checkNotAppearingResultTable() {
         resultBoard.shouldNot(appear);
-        return this;
     }
 
     public RegistrationPage removeBanner() {
