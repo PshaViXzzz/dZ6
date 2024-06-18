@@ -6,9 +6,9 @@ public class TestData {
 
     public Faker faker = new Faker();
 
-    public  String firstName = faker.name().firstName();
-    public  String lastName = faker.name().lastName();
-    public  String eMail = faker.internet().emailAddress();
+    public String firstName = faker.name().firstName();
+    public String lastName = faker.name().lastName();
+    public String eMail = faker.internet().emailAddress();
     public  String setGender = faker.options().option("Male", "Female", "Other");
     public  String phoneNumber = faker.phoneNumber().subscriberNumber(10);
     public  String year = String.valueOf(faker.number().numberBetween(1950, 2023));
