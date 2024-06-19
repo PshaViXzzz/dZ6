@@ -14,31 +14,31 @@ public class PracticeFormTestWithPageObjectTest extends TestBase {
      void successfulRegistrationTest() throws InterruptedException {
 
         registrationPage.openPage()
-                .setFirstName(TestData.firstName)
-                .setLastName(TestData.lastName)
-                .setEmail(TestData.eMail)
-                .setGender(TestData.setGender)
-                .setPhoneNumber(TestData.phoneNumber)
-                .birthDate(TestData.day, TestData.month, TestData.year)
-                .setSubject(TestData.subject)
-                .setHobbies(TestData.hobby)
-                .setPicture(TestData.picture)
-                .setAddress(TestData.address)
+                .setFirstName(testData.firstName)
+                .setLastName(testData.lastName)
+                .setEmail(testData.eMail)
+                .setGender(testData.setGender)
+                .setPhoneNumber(testData.phoneNumber)
+                .birthDate(testData.day, testData.month, testData.year)
+                .setSubject(testData.subject)
+                .setHobbies(testData.hobby)
+                .setPicture(testData.picture)
+                .setAddress(testData.address)
                 .setStateAndCity(testData.state, testData.city)
         ;
 
         registrationPage.submitRegistration();
 
-        registrationPage.checkResult("Student Name", TestData. + " " + TestData.lastName)
-                .checkResult("Student Email", TestData.eMail)
-                .checkResult("Gender", TestData.setGender)
-                .checkResult("Mobile", TestData.phoneNumber)
-                .checkResult("Date of Birth", TestData.day + " " + TestData.month + "," + TestData.year)
-                .checkResult("Subjects", TestData.subject)
-                .checkResult("Hobbies", TestData.hobby)
-                .checkResult("Picture", TestData.picture)
-                .checkResult("Address", TestData.address)
-                .checkResult("State and City", TestData.state + " " + TestData.city);
+        registrationPage.checkResult("Student Name", testData.firstName + " " + testData.lastName)
+                .checkResult("Student Email", testData.eMail)
+                .checkResult("Gender", testData.setGender)
+                .checkResult("Mobile", testData.phoneNumber)
+                .checkResult("Date of Birth", testData.day + " " + testData.month + "," + testData.year)
+                .checkResult("Subjects", testData.subject)
+                .checkResult("Hobbies", testData.hobby)
+                .checkResult("Picture", testData.picture)
+                .checkResult("Address", testData.address)
+                .checkResult("State and City", testData.state + " " + testData.city);
 
     }
 
